@@ -5,3 +5,12 @@ const rows = canvas.height / scale;
 const columns = canvas.width / scale;
 
 var snake;
+
+(function setuo() {
+  snake = new Snake();
+
+  window.setInterval(() => {
+    snake.update();
+    snake.draw();
+  }, 250);
+}());
