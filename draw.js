@@ -15,3 +15,8 @@ var snake;
     snake.draw();
   }, 250);
 }());
+
+window.addEventListener('keydown', ((evt) => {
+  const direction = evt.key.replace('Arrow', '');
+  snake.changeDirection(direction);
+}))
